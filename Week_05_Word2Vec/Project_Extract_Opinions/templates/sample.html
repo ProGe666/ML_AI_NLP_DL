@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div>
+    <a class="btn btn-outline-primary" href="/" role="button">返回</a>
+</div>
+
+<h1 class="text-center text-primary">{{ sample_header }}</h1>
+
+<section class="container">
+    <form action="" name="input" method="post">
+        <div class="form-row">
+            <label for="content">文本输入框</label>
+            <textarea class="form-control" id="content" name="input_text" rows="10" readonly>
+                在今天商务部举行的例行发布会上，有媒体表示：IMF近日发布的研究报告称，美国加征关税造成的成本几乎全部由美国企业承担了，但美国总统特朗普称，中国在为美国加征的关税买单。
+                对此，新闻发言人高峰表示：美方的贸易霸凌主义最终损害的是美国自身，买单的是美国的消费者和企业。
+                高峰表示，中美贸易不平衡，主要是由于美国出口管制等非经济因素以及储蓄率低等原因造成的，加征关税根本解决不了贸易不平衡问题。
+                关于美国单方面加征关税的影响，高峰强调，美方的贸易霸凌做法最终损害的是美国自身，买单的是美国的消费者和企业，纽约联储经济学家最近的预测表明，美方加征关税措施，将使每个美国家庭每年平均损失831美元。
+                高峰表示，美国一些智库的研究也显示，如果美方的措施持续下去，会导致美国的GDP增速下滑、就业和投资减少、国内物价上升，美国商品在海外的竞争力下降，已经有越来越多的美国企业、消费者感受到加征关税的影响。
+                与此同时，高峰再次强调了中方关于中美经贸磋商的立场：中方绝不会接受任何有损国家主权和尊严的协议，在重大原则问题上，中方绝对不会让步，如果要达成协议，美方需要拿出诚意，妥善解决中方提出的核心关切，在平等相待、相互尊重的基础上继续磋商。
+            </textarea>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-success" type="submit" disabled>提交</button>
+            <button class="btn btn-secondary" type="reset" disabled>重置</button>
+        </div>
+    </form>
+</section>
+
+<hr>
+
+<h2 class="text-center text-danger">提取结果</h2>
+
+<section class="container">
+    <table class="table table-sm table-striped table-bordered table-hover" id="result">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" rowspan=$rowspan style='vertical-align: middle;text-align: center;'>序号</th>
+                <th scope="col" rowspan=$rowspan style='vertical-align: middle;text-align: center;'>人物</th>
+                <th scope="col" rowspan=$rowspan style='vertical-align: middle;text-align: center;'>观点</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>1</td>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>特朗普</td>
+                <td>中国在为美国加征的关税买单。</td>
+            </tr>
+            <tr>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>2</td>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>媒体</td>
+                <td>IMF近日发布的研究报告称，美国加征关税造成的成本几乎全部由美国企业承担了，但美国总统特朗普称，中国在为美国加征的关税买单。</td>
+            </tr>
+            <tr>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>3</td>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>IMF</td>
+                <td>美国加征关税造成的成本几乎全部由美国企业承担了，但美国总统特朗普称，中国在为美国加征的关税买单。</td>
+            </tr>
+            <tr>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>4</td>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>高峰</td>
+                <td>美方的贸易霸凌主义最终损害的是美国自身，买单的是美国的消费者和企业。</td>
+            </tr>
+            <tr>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>5</td>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>高峰</td>
+                <td>中美贸易不平衡，主要是由于美国出口管制等非经济因素以及储蓄率低等原因造成的，加征关税根本解决不了贸易不平衡问题。</td>
+            </tr>
+            <tr>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>6</td>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>高峰</td>
+                <td>美方的贸易霸凌做法最终损害的是美国自身，买单的是美国的消费者和企业，纽约联储经济学家最近的预测表明，美方加征关税措施，将使每个美国家庭每年平均损失831美元。</td>
+            </tr>
+            <tr>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>7</td>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>纽约联储经济学家</td>
+                <td>美方加征关税措施，将使每个美国家庭每年平均损失831美元。</td>
+            </tr>
+            <tr>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>8</td>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>高峰</td>
+                <td>美国一些智库的研究也显示，如果美方的措施持续下去，会导致美国的GDP增速下滑、就业和投资减少、国内物价上升，美国商品在海外的竞争力下降，已经有越来越多的美国企业、消费者感受到加征关税的影响。</td>
+            </tr>
+            <tr >
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>9</td>
+                <td rowspan=$rowspan style='vertical-align: middle;text-align: center;'>高峰</td>
+                <td>中方关于中美经贸磋商的立场：中方绝不会接受任何有损国家主权和尊严的协议，在重大原则问题上，中方绝对不会让步，如果要达成协议，美方需要拿出诚意，妥善解决中方提出的核心关切，在平等相待、相互尊重的基础上继续磋商。</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+{% endblock %}
